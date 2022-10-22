@@ -48,9 +48,8 @@ const logger = (callingModule) => {
       logFormat,
     ),
     transports: [
-      process.env.NODE_ENV !== "production" ?
-        new transports.Console() :
-        new transports.File({ filename: __dirname + "/../logs/common.log" }),
+      new transports.Console(),
+      new transports.File({ filename: __dirname + "/../logs/common.log" }),
       new transports.File({ filename: __dirname + "/../logs/error.log", level: "error" }),
     ]
   });

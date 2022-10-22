@@ -6,6 +6,13 @@ module.exports = {
     "database": process.env.DB_NAME, // local PostgreSQL DB name
     "dialect": "postgres"
   },
+  "staging": {
+    "use_env_variable": "DB_URL", // staging database connection string
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": true,
+    },
+  },
   "production": {
     "use_env_variable": "DB_URL", // production database connection string
     "dialect": "postgres",

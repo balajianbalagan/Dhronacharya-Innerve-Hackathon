@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon --exitcrash index.js",
-    "prod": "cross-env NODE_ENV=production node index.js"
+    "staging_prep": "npm i && cross-env NODE_ENV=staging npx sequelize-cli db:migrate",
+    "staging": "cross-env NODE_ENV=staging node index.js",
+    "prod": "NODE_ENV=production node index.js"
   },
   "repository": {
     "type": "git",
