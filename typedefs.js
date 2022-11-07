@@ -1,3 +1,5 @@
+// Type definitions to enable better auto-complete features.
+
 /**
  * @typedef {import("module")} Module
  * 

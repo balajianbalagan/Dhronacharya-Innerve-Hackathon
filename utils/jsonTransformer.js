@@ -1,4 +1,11 @@
-function getNestedValuesString(obj) {
+/**
+ * String joins all the values of a JSON object, including nested keys
+ * 
+ * @param {any} obj JSON object
+ * @param {string} delimiter Delimiter of final string
+ * @returns 
+ */
+const getNestedValuesString = (obj, delimiter) => {
 	let values = [];
 	for (key in obj) {
 		if (typeof obj[key] !== "object") {
@@ -8,7 +15,7 @@ function getNestedValuesString(obj) {
 		}
 	}
 
-	return values.join();
+	return delimiter ? values.join(delimiter) : values.join();
 }
 
 module.exports = {

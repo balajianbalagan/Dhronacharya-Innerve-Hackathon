@@ -1,3 +1,5 @@
+// Whole thing is winston logger stuff, if you want to learn read the docs
+
 const path = require("path");
 
 const { createLogger, transports, config, format } = require("winston");

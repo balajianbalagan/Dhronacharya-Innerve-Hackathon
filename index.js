@@ -14,8 +14,10 @@ app.use(cors());
 app.use(helmet());
 app.disable("x-powered-by");
 
+// Put routes here
+
 app.use((_req, res) => {
-	return res.status(200).send("Induction app back-end.");
+	return res.status(200).send("Back-end for");
 });
 
 const port = process.env.PORT || 5000;

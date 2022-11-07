@@ -1,7 +1,7 @@
 {
-  "name": "induction-api-2023",
-  "version": "1.0.0",
-  "description": "",
+  "name": "backend-template",
+  "version": "1.1.0",
+  "description": "Template for back-end server using Express, Node, and Sequelize.",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon --exitcrash index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/ctf-tech-2023/induction-api-2023.git"
+    "url": "git+https://gitlab.com/ctf-tech-2023/backend-template.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/ctf-tech-2023/induction-api-2023/issues"
+    "url": "https://gitlab.com/ctf-tech-2023/backend-template/issues"
   },
-  "homepage": "https://gitlab.com/ctf-tech-2023/induction-api-2023#readme",
+  "homepage": "https://gitlab.com/ctf-tech-2023/backend-template#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "cross-fetch": "^3.1.5",
