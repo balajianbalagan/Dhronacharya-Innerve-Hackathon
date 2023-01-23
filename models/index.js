@@ -2,7 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 const Sequelize = require("sequelize");
-
+const logger = require("../utils/logger")(module);
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || "development";
 const config = require(__dirname + "/../config/sequelize.js")[env];
@@ -15,6 +15,16 @@ if (config.use_env_variable) {
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
+
+sequelize.authenticate()
+  .then(
+    () => {
+      logger.info('Sequelize auth success');
+    },
+    (err) => {
+      logger.error('Sequelize auth error', { err });
+    }
+  )
 
 // Read model definitions from folder
 fs
