@@ -15,6 +15,8 @@ app.use(helmet());
 app.disable("x-powered-by");
 
 // Put routes here
+app.use("/api/auth", require("./routes/auth"));
+
 
 app.use((_req, res) => {
 	return res.status(200).send("Back-end for");
