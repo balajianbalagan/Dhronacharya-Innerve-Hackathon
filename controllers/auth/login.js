@@ -10,6 +10,7 @@ const { Op } = require("sequelize");
 
 const login = async (req, res) => {
 	try {
+        console.log(req.body);
 		data = await users.findOne({
             where: {
                 [Op.and]: [
@@ -21,6 +22,7 @@ const login = async (req, res) => {
 
 		if(data){
             const accessToken = jwt.sign({
+                uid:data.id,
                 username: data.username,
                 email: data.email
             }, process.env.ACCESS_TOKEN_SECRET, {
